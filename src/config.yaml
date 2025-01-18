@@ -1,5 +1,5 @@
 site:
-  name: AstroWind
+  name: Dr Tasneem's Clinic
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
+    default: Dr Tasneem's Clinic
     template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: "\U0001F680 Dr. Tasneem's Clinic combines advanced aesthetic procedures with holistic wellness. Experience minimally-invasive beauty treatments, mental wellness programs, and comprehensive medical care. Offering CBT, gynecological services, and personalized consultations in a state-of-the-art facility. Book your in-person or virtual consultation today."
   robots:
     index: true
     follow: true

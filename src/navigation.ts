@@ -3,35 +3,35 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Homes',
+      text: 'Institute of Health',
       links: [
         {
-          text: 'SaaS',
+          text: 'Beautician Courses',
           href: getPermalink('/homes/saas'),
         },
         {
-          text: 'Startup',
+          text: 'Health and Nutrition',
           href: getPermalink('/homes/startup'),
         },
         {
-          text: 'Mobile App',
+          text: 'Obstetrics and Gynaecology',
           href: getPermalink('/homes/mobile-app'),
         },
         {
-          text: 'Personal',
+          text: 'Hijama (Cupping Therapy)',
           href: getPermalink('/homes/personal'),
         },
       ],
     },
     {
-      text: 'Pages',
+      text: 'Services',
       links: [
         {
-          text: 'Features (Anchor Link)',
-          href: getPermalink('/#features'),
+          text: 'Service',
+          href: getPermalink('/#services'),
         },
         {
-          text: 'Services',
+          text: 'Procedures',
           href: getPermalink('/services'),
         },
         {
@@ -47,41 +47,8 @@ export const headerData = {
           href: getPermalink('/contact'),
         },
         {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
           text: 'Privacy policy',
           href: getPermalink('/privacy'),
-        },
-      ],
-    },
-    {
-      text: 'Landing',
-      links: [
-        {
-          text: 'Lead Generation',
-          href: getPermalink('/landing/lead-generation'),
-        },
-        {
-          text: 'Long-form Sales',
-          href: getPermalink('/landing/sales'),
-        },
-        {
-          text: 'Click-Through',
-          href: getPermalink('/landing/click-through'),
-        },
-        {
-          text: 'Product Details (or Services)',
-          href: getPermalink('/landing/product'),
-        },
-        {
-          text: 'Coming Soon or Pre-Launch',
-          href: getPermalink('/landing/pre-launch'),
-        },
-        {
-          text: 'Subscription',
-          href: getPermalink('/landing/subscription'),
         },
       ],
     },
@@ -110,12 +77,8 @@ export const headerData = {
         },
       ],
     },
-    {
-      text: 'Widgets',
-      href: '#',
-    },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ text: 'Get in Touch', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
 };
 
 export const footerData = {
@@ -178,6 +141,6 @@ export const footerData = {
   ],
   footNote: `
     <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="https://onwidget.com/favicon/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
+    Made by <a class="text-blue-600 underline dark:text-muted" href="https://onwidget.com/"> Muhammad Hamza Asad</a>
   `,
 };
