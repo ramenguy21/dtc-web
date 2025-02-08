@@ -31,24 +31,20 @@ export const headerData = {
           href: getPermalink('/#services'),
         },
         {
-          text: 'Procedures',
+          text: 'Aesthetic Procedures',
           href: getPermalink('/services'),
         },
         {
-          text: 'Pricing',
-          href: getPermalink('/pricing'),
+          text: 'Hijama',
+          href: getPermalink('/hijama'),
         },
         {
-          text: 'About us',
+          text: 'Gynae & Obs',
           href: getPermalink('/about'),
         },
         {
-          text: 'Contact',
+          text: 'General Lab Tests',
           href: getPermalink('/contact'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
         },
       ],
     },
@@ -84,39 +80,16 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Product',
+      title: 'Clinic',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
+        { text: 'Services', href: '#' },
         { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
         { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
       ],
     },
+
     {
-      title: 'Platform',
-      links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
-      ],
-    },
-    {
-      title: 'Support',
-      links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
-      ],
-    },
-    {
-      title: 'Company',
+      title: 'Who we are',
       links: [
         { text: 'About', href: '#' },
         { text: 'Blog', href: '#' },

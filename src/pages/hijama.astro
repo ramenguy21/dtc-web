@@ -6,24 +6,68 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import type { CalendarList } from '~/types';
 
 const metadata = {
   title: 'Pricing',
 };
+
+const TODAY = new Date();
+const HIJRI_DATES = ['17', '19', '21'];
+
+let dates: string[] = [];
+
+try {
+  // Fetch data from the API
+  const response = await fetch(
+    `https://api.aladhan.com/v1/gToHCalendar/${TODAY.getMonth() + 1}/${TODAY.getFullYear()}`
+  );
+
+  // Check if the response is successful
+  if (!response.ok) {
+    throw new Error(`Failed to fetch data: ${response.statusText}`);
+  }
+
+  // Parse the JSON response and assert the type
+  const { data } = (await response.json()) as { data: CalendarList };
+
+  // Filter and map the data to get the Gregorian dates for matching Hijri dates
+  dates = data
+    .filter((gdate) => HIJRI_DATES.includes(gdate.hijri.day)) // Filter only matching Hijri dates
+    .map((gdate) => {
+      console.log(gdate);
+      return gdate.gregorian.date;
+    }); // Map to Gregorian dates
+} catch (error) {
+  console.error('Error fetching or processing data:', error);
+  // Handle the error gracefully (e.g., show a message to the user)
+}
 ---
 
+<!--Data -->
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText
-    tagline="Pricing"
-    title="Stellar Pricing for Every Journey"
-    subtitle="Choose the perfect plan that aligns with your cosmic goals."
-  />
+  <HeroText tagline="Hijama" title="A traditional practice" subtitle="The Sunnah Dates below" />
 
-  <!-- Pricing Widget ******************* -->
+  <!-- Hijama date widget -->
 
-  <Prices
+  <div class="flex flex-col md:justify-around space-y-4 items-center text-center md:flex-row">
+    <div class="w-full bg-white text-white rounded md:w-1/3 mx-4 p-4 flex flex-col content-center">
+      <h2 class="text-blue-500 font-bold text-xl p-2">17th</h2>
+      <h3 class="italic text-black">{dates[0]}</h3>
+    </div>
+    <div class="w-full bg-white text-white rounded md:w-1/3 mx-4 p-4 flex flex-col content-center">
+      <h2 class="text-blue-500 font-bold text-xl p-2">19th</h2>
+      <h3 class="italic text-black">{dates[1]}</h3>
+    </div>
+    <div class="w-full bg-white text-white rounded md:w-1/3 mx-4 p-4 flex flex-col content-center">
+      <h2 class="text-blue-500 font-bold text-xl p-2">21st</h2>
+      <h3 class="italic text-black">{dates[2]}</h3>
+    </div>
+  </div>
+
+  <!--   <Prices
     title="Our prices"
     subtitle="Only pay for what you need"
     prices={[
@@ -110,8 +154,6 @@ const metadata = {
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
-
   <Features3
     title="Price-related features"
     subtitle="Discover the advantages of choosing our plans"
@@ -150,8 +192,6 @@ const metadata = {
     ]}
     classes={{ container: 'max-w-5xl' }}
   />
-
-  <!-- Steps Widget ****************** -->
 
   <Steps
     title="A guided journey from plans to creativity"
@@ -193,8 +233,6 @@ const metadata = {
     }}
   />
 
-  <!-- FAQs Widget ******************* -->
-
   <FAQs
     title="Pricing FAQs"
     subtitle="Choosing the right plan is important, and we're here to answer your questions. If you have queries about our pricing options, you're in the right place."
@@ -226,7 +264,7 @@ const metadata = {
           'No, the subscription cost covers all the features and templates listed under each plan. There are no hidden fees or extra charges.',
       },
     ]}
-  />
+  /> -->
 
   <!-- CallToAction Widget *********** -->
 

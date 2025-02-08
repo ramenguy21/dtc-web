@@ -284,3 +284,74 @@ export interface Content extends Omit<Headline, 'classes'>, Widget {
 }
 
 export interface Contact extends Omit<Headline, 'classes'>, Form, Widget {}
+
+export type CalendarList = Calendar[];
+
+export interface Calendar {
+  hijri: Hijri;
+  gregorian: Gregorian;
+}
+
+export interface Gregorian {
+  date: string;
+  format: Format;
+  day: string;
+  weekday: GregorianWeekday;
+  month: GregorianMonth;
+  year: string;
+  designation: Designation;
+  lunarSighting: boolean;
+}
+
+export interface Designation {
+  abbreviated: Abbreviated;
+  expanded: Expanded;
+}
+
+export type Abbreviated = 'AD' | 'AH';
+
+export type Expanded = 'Anno Domini' | 'Anno Hegirae';
+
+export type Format = 'DD-MM-YYYY';
+
+export interface GregorianMonth {
+  number: number;
+  en: PurpleEn;
+}
+
+export type PurpleEn = 'January';
+
+export interface GregorianWeekday {
+  en: string;
+}
+
+export interface Hijri {
+  date: string;
+  format: Format;
+  day: string;
+  weekday: HijriWeekday;
+  month: HijriMonth;
+  year: string;
+  designation: Designation;
+  holidays: string[];
+  adjustedHolidays: string[];
+  method: Method;
+}
+
+export type Method = 'HJCoSA';
+
+export interface HijriMonth {
+  number: number;
+  en: FluffyEn;
+  ar: Ar;
+  days: number;
+}
+
+export type Ar = 'Ø±ÙŽØ¬ÙŽØ¨' | 'Ø´ÙŽØ¹Ù’Ø¨Ø§Ù†';
+
+export type FluffyEn = 'Rajab' | 'ShaÊ¿bÄ\u0081n';
+
+export interface HijriWeekday {
+  en: string;
+  ar: string;
+}
