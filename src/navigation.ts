@@ -6,20 +6,20 @@ export const headerData = {
       text: 'Institute of Health',
       links: [
         {
-          text: 'Beautician Courses',
-          href: getPermalink('/homes/saas'),
+          text: 'Aesthetic Courses',
+          href: getPermalink('/courses/aesthetic'),
         },
         {
           text: 'Health and Nutrition',
-          href: getPermalink('/homes/startup'),
+          href: getPermalink('/courses/nutrition'),
         },
         {
           text: 'Obstetrics and Gynaecology',
-          href: getPermalink('/homes/mobile-app'),
+          href: getPermalink('/courses/gynae-obs'),
         },
         {
           text: 'Hijama (Cupping Therapy)',
-          href: getPermalink('/homes/personal'),
+          href: getPermalink('/courses/hijama'),
         },
       ],
     },
