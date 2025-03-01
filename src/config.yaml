@@ -1,6 +1,6 @@
 site:
   name: Dr Tasneem's Clinic
-  site: 'https://astrowind.vercel.app'
+  site: 'https://drtasneemsclinic.com/'
   base: '/'
   trailingSlash: false
 
@@ -10,13 +10,13 @@ site:
 metadata:
   title:
     default: Dr Tasneem's Clinic
-    template: '%s — AstroWind'
+    template: '%s — Clinic'
   description: "\U0001F680 Dr. Tasneem's Clinic combines advanced aesthetic procedures with holistic wellness. Experience minimally-invasive beauty treatments, mental wellness programs, and comprehensive medical care. Offering CBT, gynecological services, and personalized consultations in a state-of-the-art facility. Book your in-person or virtual consultation today."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: drtasneemclinic
     images:
       - url: '~/assets/images/default.png'
         width: 1200

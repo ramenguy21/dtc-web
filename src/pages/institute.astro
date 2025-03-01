@@ -6,15 +6,15 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 
 import Features2 from '~/components/widgets/Features2.astro';
 import Features from '~/components/widgets/Features.astro';
-import Stats from '~/components/widgets/Stats.astro';
+//import Stats from '~/components/widgets/Stats.astro';
 import Features3 from '~/components/widgets/Features3.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
+//import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
 
-import { YouTube } from 'astro-embed';
+//import { YouTube } from 'astro-embed';
 
 const metadata = {
-  title: 'Startup Landing Page',
+  title: 'Dr Tasneem`s Institute of Health',
 };
 ---
 
@@ -22,30 +22,29 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Startup Web Demo"
+    tagline="Dr. Tasneem's Institute of Health"
     actions={[
       {
         variant: 'primary',
         target: '_blank',
-        text: 'Get templates',
-        href: 'https://github.com/onwidget/astrowind',
-        icon: 'tabler:download',
+        text: 'Register',
+        href: '#',
+        icon: 'tabler:calendar-dot',
       },
       { text: 'Learn more', href: '#features' },
     ]}
   >
     <Fragment slot="title">
-      Improve <span class="hidden sm:inline">the online presence of</span> your <span
-        class="text-accent dark:text-white highlight">Startup</span
-      > with Astrowind templates
+      Empowering <span class="hidden sm:inline">the Future of </span>
+      <span class="text-accent dark:text-white highlight">Aesthetic</span> and Medical Excellence
     </Fragment>
 
     <Fragment slot="subtitle">
-      Step into the spotlight with <span class="font-semibold">Astrowind</span> templates, your pathway to fortifying your
-      startup's digital footprint, fostering credibility, and expanding your reach.
+      Welcome to Dr. Tasneem's Institute of Health, a pioneering institution dedicated to advancing education and
+      training in aesthetic medicine, health, and wellness.
     </Fragment>
 
-    <Fragment slot="image">
+    <!--Fragment slot="image">
       <YouTube id="gxBkghlglTg" title="Astro just Launched.... Could it be the ultimate web framework?" />
       <style is:inline>
         lite-youtube {
@@ -53,14 +52,14 @@ const metadata = {
           max-width: 100%;
         }
       </style>
-    </Fragment>
+    </Fragment-->
   </Hero>
 
   <!-- Features2 Widget ************** -->
 
   <Features2
     title="About us"
-    subtitle="We believe in the magic of turning dreams into stunning realities. Founded by passionate developers with a shared vision, we set out to simplify the website creation process. Our templates bring together the innovation of Astro 5.0 and the versatility of Tailwind CSS, enabling you to express your unique brand identity like never before."
+    subtitle="Our institute is more than just a training center—it’s a gateway to professional success and innovation. Whether you’re a student seeking a rewarding career or an investor looking to support cutting-edge education, Dr. Tasneem's Institute of Health offers unparalleled opportunities for growth and impact."
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -69,7 +68,7 @@ const metadata = {
 
   <!-- Stats Widget ****************** -->
 
-  <Stats
+  <!-- Stats
     title="Discover the impressive impact of Astrowind"
     subtitle="The numbers below reflect the trust our users have placed in us and the remarkable outcomes we've helped them achieve."
     stats={[
@@ -78,51 +77,22 @@ const metadata = {
       { title: 'User Ratings', amount: '4.8' },
       { title: 'Satisfied Clients', amount: '116K' },
     ]}
-  />
+  /-->
 
   <!-- Brands Widget ****************** -->
 
   <Brands
     title="Partnerships & Collaborations"
-    subtitle="At Astrowind, we believe in the power of collaboration to drive innovation and create exceptional experiences."
+    subtitle="At our Institute, we believe in the power of collaboration to drive innovation and create exceptional educational advances."
     icons={[]}
     images={[
       {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'Paypal',
+        src: '~/assets/images/dow.png',
+        alt: 'DUHS',
       },
       {
-        src: 'https://cdn.pixabay.com/photo/2021/12/06/13/48/visa-6850402_1280.png',
-        alt: 'Visa',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2013/10/01/10/29/ebay-189064_1280.png',
-        alt: 'Ebay',
-      },
-
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/04/13/17/45/icon-720944_1280.png',
-        alt: 'Youtube',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2013/02/12/09/07/microsoft-80658_1280.png',
-        alt: 'Microsoft',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_1280.png',
-        alt: 'Node JS',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/10/31/12/54/google-1015751_1280.png',
-        alt: 'Google',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2021/12/06/13/45/meta-6850393_1280.png',
-        alt: 'Meta',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2013/01/29/22/53/yahoo-76684_1280.png',
-        alt: 'Yahoo',
+        src: '~/assets/images/sbte.jpeg',
+        alt: 'SBTE',
       },
     ]}
   />
@@ -130,26 +100,32 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="What services do we provide?"
-    subtitle="We offer a wide range of website templates that suit various industries and purposes such as business, portfolio, e-commerce, blog, etc."
+    title="Our Courses"
+    subtitle="We offer a range of 4 skill-training programs designed to meet the demands of the growing aesthetic and healthcare industries"
     items={[
       {
-        title: 'Installation Instructions',
+        title: 'Non-Invasive Beautician',
         description:
-          'Offer clear instructions on how to download the purchased templates and install them on various website platforms or content management systems.',
-        icon: 'flat-color-icons:document',
+          'Master the art of non-invasive beauty treatments, from skincare to advanced aesthetic procedures.',
+        icon: 'flat-color-icons:survey',
       },
       {
-        title: 'Demo and Previews',
+        title: 'Aesthetic Technologist',
         description:
-          'Provide interactive demos and previews that allow customers to see how their chosen template will look and function before making a purchase.',
+          'Dive deep into both invasive and non-invasive techniques, including: PRP (Hair & Face) Fillers, Threads, Botox, Hydrafacial, Skin Rejuvenation and more',
         icon: 'flat-color-icons:template',
       },
       {
-        title: 'Technical Support',
+        title: 'Health and Nutrition',
         description:
-          'Providing customer support for any technical issues related to the templates or their implementation.',
-        icon: 'flat-color-icons:voice-presentation',
+          'Learn the science of nutrition and its role in overall health and wellness, with a focus on practical applications.',
+        icon: 'flat-color-icons:shop',
+      },
+      {
+        title: 'Cupping Therapy',
+        description:
+          'Explore traditional and modern techniques in cupping therapy, a growing field in holistic health.',
+        icon: 'flat-color-icons:close-up-mode',
       },
     ]}
   >
@@ -162,49 +138,40 @@ const metadata = {
 
   <Features
     id="features"
-    title="Main features of our templates"
-    subtitle="Possess several key characteristics to effectively cater to the needs of startups and entrepreneurs."
-    columns={3}
+    title="Our Commitment to Excellence"
+    subtitle="Dr. Tasneem's Institute of Health is designed to meet the needs of aspiring professionals and investors in the fields of aesthetic medicine, health, and wellness. Here are the key features that"
+    columns={2}
     items={[
       {
-        title: 'Modern and Professional Design',
+        title: 'Cutting-Edge Curriculum',
         description:
-          'Have a contemporary design that reflects current design trends and gives a professional impression.',
+          'Our courses are designed to reflect the latest advancements in aesthetic technology, health, and nutrition, ensuring students are equipped with up-to-date, industry-relevant knowledge.',
         icon: 'tabler:artboard',
       },
       {
-        title: 'Responsive and Mobile-Friendly',
-        description: 'Adapt seamlessly to different screen sizes and devices to ensure a consistent experience.',
-        icon: 'tabler:picture-in-picture',
+        title: 'Expert Faculty and Training',
+        description:
+          'In partnership with the Sindh Board of Technical Education (SBTE) and affiliated with Dow University of Health Sciences (DUHS), our certifications are recognized globally, opening doors to career opportunities both locally and abroad.',
+        icon: 'tabler:artboard',
       },
       {
-        title: 'Customizability',
+        title: 'Internationally Recognized Certifications',
         description:
           'Easily customizable, allowing users to adapt the design, colors, typography, and content to match their brand identity.',
         icon: 'tabler:adjustments-horizontal',
       },
       {
-        title: 'Fast Loading Times',
-        description: 'Optimized for speed to ensure a smooth user experience and favorable search engine rankings.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'Gateway to Immigration Programs',
         description:
-          'Incorporate SEO best practices in template structure and code to improve visibility in search engine results.',
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Compatibility',
-        description: 'The templates work seamlessly across various content management systems and website builders.',
-        icon: 'tabler:plug-connected',
+          'Our internationally accredited programs serve as a pathway for students to pursue careers and further education in countries with high demand for skilled professionals.',
+        icon: 'tabler:rocket',
       },
     ]}
   />
 
   <!-- FAQs Widget ******************* -->
 
-  <FAQs
+  <!--FAQs
     title="Frequently Asked Questions"
     items={[
       {
@@ -242,14 +209,14 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </FAQs>
+  </FAQs-->
 
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Let us know how we can help"
+    title="Get in Touch"
     subtitle="We’re here to help and answer any question you might have."
-    columns={4}
+    columns={2}
     items={[
       {
         title: 'Phone',
@@ -271,26 +238,6 @@ const metadata = {
           variant: 'link',
         },
       },
-      {
-        title: 'Chat with sales',
-        icon: 'tabler:message-circle',
-        callToAction: {
-          target: '_blank',
-          text: 'Start chatting',
-          href: '/',
-          variant: 'link',
-        },
-      },
-      {
-        title: 'Chat with support',
-        icon: 'tabler:message-circle',
-        callToAction: {
-          target: '_blank',
-          text: 'Start chatting',
-          href: '/',
-          variant: 'link',
-        },
-      },
     ]}
   />
 
@@ -300,18 +247,18 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        target: '_blank',
-        text: 'Get templates',
-        href: 'https://github.com/onwidget/astrowind',
-        icon: 'tabler:download',
+        target: '_self',
+        text: 'Get in Touch',
+        href: 'tel:+92 335 1313259',
+        icon: 'tabler:phone',
       },
     ]}
   >
     <Fragment slot="title">Be a part of our vision</Fragment>
 
     <Fragment slot="subtitle">
-      Discover a dynamic work environment, unparalleled growth opportunities, and the chance to make a meaningful
-      impact.
+      Partner with us to support the future of technical education and tap into the growing demand for skilled
+      professionals in the aesthetic and healthcare sectors.
     </Fragment>
   </CallToAction>
 </Layout>

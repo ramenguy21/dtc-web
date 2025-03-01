@@ -2,9 +2,11 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
+    { text: 'About Dr Tasneem', href: getPermalink('/personal') },
     {
       text: 'Institute of Health',
-      links: [
+      href: getPermalink('/institute'),
+      /**links: [
         {
           text: 'Aesthetic Courses',
           href: getPermalink('/courses/aesthetic'),
@@ -22,12 +24,13 @@ export const headerData = {
           href: getPermalink('/courses/hijama'),
         },
       ],
+    **/
     },
     {
       text: 'Services',
       links: [
         {
-          text: 'Service',
+          text: 'Overview',
           href: getPermalink('/#services'),
         },
         {
@@ -52,6 +55,9 @@ export const headerData = {
       text: 'Blog',
       links: [
         {
+          text: 'Coming Soon',
+        },
+        /*{
           text: 'Blog List',
           href: getBlogPermalink(),
         },
@@ -70,7 +76,7 @@ export const headerData = {
         {
           text: 'Tag Page',
           href: getPermalink('astro', 'tag'),
-        },
+        },*/
       ],
     },
   ],
