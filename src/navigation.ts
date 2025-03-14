@@ -35,7 +35,7 @@ export const headerData = {
         },
         {
           text: 'Aesthetic Procedures',
-          href: getPermalink('/services'),
+          href: getPermalink('/services/aesthetics'),
         },
         {
           text: 'Hijama',
@@ -55,11 +55,12 @@ export const headerData = {
       text: 'Blog',
       links: [
         {
-          text: 'Coming Soon',
+          text: 'Posts',
+          href: getBlogPermalink(),
         },
         /*{
           text: 'Blog List',
-          href: getBlogPermalink(),
+          ,
         },
         {
           text: 'Article',

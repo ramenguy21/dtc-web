@@ -1,5 +1,5 @@
 site:
-  name: Dr Tasneem's Clinic
+  name: Dr Tasneem's Institute of Health
   site: 'https://drtasneemsclinic.com/'
   base: '/'
   trailingSlash: false
@@ -33,7 +33,7 @@ i18n:
 
 apps:
   blog:
-    isEnabled: false
+    isEnabled: true
     postsPerPage: 6
 
     post:
