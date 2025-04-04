@@ -1,0 +1,78 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: "Dr. Tasneem's Institute of Health | Health Expo and Conference 2025",
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero actions={[{ variant: 'primary', text: 'Register Now !' }]}>
+    <Fragment slot="title"> Integrated Dermatology and Aesthetics Segement </Fragment>
+    <Fragment slot="subtitle">In collaboration with Badar Expo Solutions</Fragment>
+  </Hero>
+  <form
+    name="expo_registration"
+    data-netlify="true"
+    class="m-auto flex flex-col space-y-2.5 mx-2 md:w-1/2 bg-secondary p-4 rounded mb-5"
+  >
+    <div class="flex flex-col space-y-1">
+      <label for="full_name">Full Name</label>
+      <input required aria-required="true" class="bg-slate-100 rounded p-2" name="full_name" type="text" />
+    </div>
+    <div class="flex flex-col space-y-1">
+      <label for="email">Email</label>
+      <input required aria-required="true" class="bg-slate-100 rounded p-2" name="email" type="email" />
+    </div>
+    <div class="flex flex-col space-y-1">
+      <label for="cell">Cell Phone</label>
+      <input required aria-required="true" class="bg-slate-100 rounded p-2" name="cell" type="tel" />
+    </div>
+    <div class="flex flex-col space-y-1">
+      <label for="cnic">CNIC</label>
+      <input required aria-required="true" class="bg-slate-100 rounded p-2" name="cnic" type="text" />
+    </div>
+    <div class="flex flex-col">
+      <label for="profession">Education Background</label>
+      <select class="bg-slate-100 rounded p-2" name="profession">
+        <option value="mbbs">MBBS</option>
+        <option value="bds">BDS</option>
+        <option value="bems">BEMS</option>
+        <option value="tech">Technician</option>
+        <option value="beautician">Beautician</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="flex flex-col space-y-1">
+      <label for="reg_no">PMDC / Council Registration Number</label>
+      <input class="bg-slate-100 rounded p-2" name="med_reg_no" type="text" />
+    </div>
+    <div class="flex flex-col">
+      <p>Days Attending</p>
+      <div>
+        <input type="checkbox" name="day1" />
+        <label class="text-sm" for="day1">Day 1 (for Doctors only)</label>
+      </div>
+      <div>
+        <input type="checkbox" name="day2" />
+        <label class="text-sm" for="day2">Day 2 (Allied Health Sciences)</label>
+      </div>
+      <div>
+        <input type="checkbox" name="day3" />
+        <label class="text-sm" for="day3">Day 3 (Beauty and Aesthetics)</label>
+      </div>
+    </div>
+    <!--    <div>
+      <p>Payment</p>
+      <p>You can choose to pay online</p>
+      <button class="bg-secondary p-2 rounded">Pay Now !</button>
+      <p>or through your banking app and upload the screenshot</p>
+      <p>Payment Details</p>{/* todo : add a copy functionality to the IBAN no.*/}
+      <button class="bg-secondary p-2 rounded">Upload </button>
+    </div> -->
+
+    <button class="bg-primary p-2 my-4 rounded text-white w-1/2 mx-auto" type="submit">Submit</button>
+  </form>
+</Layout>
