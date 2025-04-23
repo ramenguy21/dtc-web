@@ -1,0 +1,365 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: "Dr. Tasneem's Institute of Health | Health Expo and Conference 2025",
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero actions={[{ variant: 'primary', text: 'Register Now !' }]}>
+    <Fragment slot="title"> Integrated Dermatology and Aesthetics Segment </Fragment>
+    <Fragment slot="subtitle">In collaboration with Badar Expo Solutions</Fragment>
+  </Hero>
+
+  <form
+    name="expo_registration"
+    data-netlify="true"
+    method="POST"
+    enctype="multipart/form-data"
+    class="flex flex-col space-y-4 mx-2 md:w-2/3 lg:w-1/2 md:m-auto bg-secondary p-6 rounded mb-8"
+    netlify-honeypot="bot-field"
+  >
+    <p class="hidden">
+      <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+    </p>
+
+    <h1 class="text-2xl font-bold text-center mb-4">Master Class Registration Form</h1>
+
+    <!-- Personal Information Section -->
+    <div class="bg-white p-4 rounded-lg shadow-sm">
+      <h2 class="text-lg font-semibold mb-3">Personal Information</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="flex flex-col space-y-1">
+          <label for="full_name" class="font-medium">Full Name*</label>
+          <input
+            required
+            aria-required="true"
+            class="bg-slate-100 rounded p-2 border border-gray-300"
+            name="full_name"
+            type="text"
+          />
+        </div>
+
+        <div class="flex flex-col space-y-1">
+          <label for="title" class="font-medium">Professional Title</label>
+          <input
+            class="bg-slate-100 rounded p-2 border border-gray-300"
+            name="title"
+            type="text"
+            placeholder="e.g., Dr., Aesthetician, etc."
+          />
+        </div>
+
+        <div class="flex flex-col space-y-1">
+          <label for="email" class="font-medium">Email*</label>
+          <input
+            required
+            aria-required="true"
+            class="bg-slate-100 rounded p-2 border border-gray-300"
+            name="email"
+            type="email"
+          />
+        </div>
+
+        <div class="flex flex-col space-y-1">
+          <label for="cell" class="font-medium">Cell Phone*</label>
+          <input
+            required
+            aria-required="true"
+            class="bg-slate-100 rounded p-2 border border-gray-300"
+            name="cell"
+            type="tel"
+            placeholder="03XX-XXXXXXX"
+          />
+        </div>
+
+        <div class="flex flex-col space-y-1">
+          <label for="cnic" class="font-medium">CNIC*</label>
+          <input
+            required
+            aria-required="true"
+            class="bg-slate-100 rounded p-2 border border-gray-300"
+            name="cnic"
+            type="text"
+            placeholder="XXXXX-XXXXXXX-X"
+          />
+        </div>
+
+        <div class="flex flex-col space-y-1">
+          <label for="institution" class="font-medium">Workplace/Institution</label>
+          <input class="bg-slate-100 rounded p-2 border border-gray-300" name="institution" type="text" />
+        </div>
+
+        <div class="flex flex-col space-y-1">
+          <label for="city" class="font-medium">City*</label>
+          <input
+            required
+            aria-required="true"
+            class="bg-slate-100 rounded p-2 border border-gray-300"
+            name="city"
+            type="text"
+          />
+        </div>
+
+        <div class="flex flex-col space-y-1">
+          <label for="how_heard" class="font-medium">How did you hear about us?</label>
+          <select class="bg-slate-100 rounded p-2 border border-gray-300" name="how_heard">
+            <option value="">Please select</option>
+            <option value="social_media">Social Media</option>
+            <option value="colleague">Colleague Referral</option>
+            <option value="email">Email</option>
+            <option value="website">Website</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Session Selection -->
+    <div class="bg-white p-4 rounded-lg shadow-sm">
+      <h2 class="text-lg font-semibold mb-3">Session Registration</h2>
+      <p class="text-sm text-gray-600 mb-4">
+        Please select the sessions you wish to attend (at least one session is required):
+      </p>
+
+      <div class="space-y-4">
+        <!-- Session 1 (Optional) -->
+        <div class="p-3 bg-slate-50 rounded border border-slate-200">
+          <div class="flex items-start">
+            <input class="mt-1 mr-3" type="checkbox" id="session1" name="sessions" value="session1" />
+            <div>
+              <label for="session1" class="font-medium">Session 1 - 10,000 PKR</label>
+              <p class="text-sm">Dr. Uzma Rajar</p>
+              <p class="text-sm">Lecture 1 (9:30-10:15 AM): Combination approach for mid-face balance</p>
+              <p class="text-sm">Lecture 2 + Hands-on (10:30-11:30 AM): Vulvovaginal Rejuvenation</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Session 2 (Optional) -->
+        <div>
+          <p class="font-medium mb-2">Session 2 (Choose one or both):</p>
+
+          <div class="space-y-3 ml-4">
+            <div class="p-3 bg-slate-50 rounded border border-slate-200">
+              <div class="flex items-start">
+                <input class="mt-1 mr-3" type="checkbox" id="session2a" name="sessions" value="session2a" />
+                <div>
+                  <label for="session2a" class="font-medium">Dermal Fillers - 5,000 PKR</label>
+                  <p class="text-sm">Faisal Ikhlaq (10:30-10:15 AM)</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-3 bg-slate-50 rounded border border-slate-200">
+              <div class="flex items-start">
+                <input class="mt-1 mr-3" type="checkbox" id="session2b" name="sessions" value="session2b" />
+                <div>
+                  <label for="session2b" class="font-medium">Botox - 5,000 PKR</label>
+                  <p class="text-sm">Dr. Faisal Khilji (10:30-11:45 AM)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Session 3 (Optional) -->
+        <div class="p-3 bg-slate-50 rounded border border-slate-200">
+          <div class="flex items-start">
+            <input class="mt-1 mr-3" type="checkbox" id="session3" name="sessions" value="session3" />
+            <div>
+              <label for="session3" class="font-medium">Session 3 - 5,000 PKR</label>
+              <p class="text-sm">Dr. Adeel ur Rehman (02:00-02:30 PM)</p>
+              <p class="text-sm">Topic: Laser Hair Removal</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Session 4 (Optional) -->
+        <div class="p-3 bg-slate-50 rounded border border-slate-200">
+          <div class="flex items-start">
+            <input class="mt-1 mr-3" type="checkbox" id="session4" name="sessions" value="session4" />
+            <div>
+              <label for="session4" class="font-medium">Session 4 - 5,000 PKR</label>
+              <p class="text-sm">Dr. Uzma Pirzada (03:45-04:15 PM)</p>
+              <p class="text-sm">Topic: Role of Energy-Based Devices (EBD) in Aesthetics & Dermatology</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 p-3 bg-primary/10 rounded-lg">
+        <p class="font-bold">Total Amount: <span id="totalAmount">0 PKR</span></p>
+        <p id="noSessionsError" class="text-red-600 mt-1 hidden">Please select at least one session.</p>
+      </div>
+    </div>
+
+    <!-- Payment Section -->
+    <div class="bg-white p-4 rounded-lg shadow-sm">
+      <h2 class="text-lg font-semibold mb-3">Payment Information</h2>
+
+      <div class="mb-4 p-3 bg-blue-50 rounded border border-blue-200">
+        <h3 class="font-medium text-blue-800">Bank Transfer Details:</h3>
+        <p class="mb-2">Please transfer the total amount to the following account:</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+          <p><span class="font-medium">Account Title:</span> Dr. Tasneem's Institute of Health</p>
+          <p><span class="font-medium">Bank:</span> Meezaan Bank</p>
+          <p><span class="font-medium">Account Number:</span> 99670111604139</p>
+          <p><span class="font-medium">IBAN:</span> PK23MEZN0099670111604139</p>
+        </div>
+        <button type="button" id="copyIban" class="text-sm text-blue-600 hover:text-blue-800 underline mt-1"
+          >Copy IBAN</button
+        >
+      </div>
+
+      <div class="space-y-3">
+        <div class="flex flex-col space-y-1">
+          <label for="payment_date" class="font-medium">Date of Transfer*</label>
+          <input
+            required
+            aria-required="true"
+            class="bg-slate-100 rounded p-2 border border-gray-300"
+            name="payment_date"
+            type="date"
+          />
+        </div>
+
+        <div class="flex flex-col space-y-1">
+          <label for="transfer_ref" class="font-medium">Transfer Reference/Transaction ID*</label>
+          <input
+            required
+            aria-required="true"
+            class="bg-slate-100 rounded p-2 border border-gray-300"
+            name="transfer_ref"
+            type="text"
+          />
+        </div>
+
+        <div class="flex flex-col space-y-1">
+          <label for="transfer_amount" class="font-medium">Amount Transferred*</label>
+          <input
+            required
+            aria-required="true"
+            class="bg-slate-100 rounded p-2 border border-gray-300"
+            name="transfer_amount"
+            type="text"
+          />
+        </div>
+
+        <div class="flex flex-col space-y-1">
+          <label for="payment_proof" class="font-medium">Upload Payment Receipt*</label>
+          <input
+            required
+            aria-required="true"
+            class="bg-slate-100 rounded p-2 border border-gray-300"
+            name="payment_proof"
+            type="file"
+            accept="image/*,.pdf"
+          />
+          <p class="text-xs text-gray-500">Upload screenshot or PDF (max 10MB)</p>
+        </div>
+      </div>
+    </div>
+
+    <button
+      id="submitButton"
+      class="bg-primary p-3 rounded text-white font-medium w-full md:w-1/2 mx-auto hover:bg-primary-dark transition-colors"
+      type="submit">Complete Registration</button
+    >
+
+    <p class="text-sm text-center text-gray-600">
+      After submission, you will receive a confirmation email within 24 hours once your payment is verified.
+    </p>
+  </form>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const session1Fee = 10000;
+    const optionalFee = 5000;
+    const totalElement = document.getElementById('totalAmount');
+    const noSessionsError = document.getElementById('noSessionsError');
+    const submitButton = document.getElementById('submitButton');
+    const allSessionCheckboxes = document.querySelectorAll('input[name="sessions"]');
+    const form = document.querySelector('form[name="expo_registration"]');
+
+    // Initial calculation
+    calculateTotal();
+
+    // Recalculate when any checkbox changes
+    allSessionCheckboxes.forEach((checkbox) => {
+      checkbox.addEventListener('change', function () {
+        calculateTotal();
+        // Always check if any checkbox is selected and update error visibility
+        const anySessionSelected = Array.from(allSessionCheckboxes).some((cb) => cb.checked);
+        if (noSessionsError) {
+          if (anySessionSelected) {
+            noSessionsError.classList.add('hidden');
+          } else {
+            noSessionsError.classList.remove('hidden');
+          }
+        }
+      });
+    });
+
+    // Copy IBAN functionality
+    const copyButton = document.getElementById('copyIban');
+    copyButton?.addEventListener('click', function () {
+      const iban = 'PK36HABB0012345678901234';
+      navigator.clipboard.writeText(iban).then(() => {
+        copyButton.textContent = 'Copied!';
+        setTimeout(() => {
+          copyButton.textContent = 'Copy IBAN';
+        }, 2000);
+      });
+    });
+
+    // Form validation before submit
+    form?.addEventListener('submit', function (e) {
+      const anySessionSelected = Array.from(allSessionCheckboxes).some((checkbox) => checkbox.checked);
+
+      if (!anySessionSelected) {
+        e.preventDefault();
+        if (noSessionsError) noSessionsError.classList.remove('hidden');
+        window.scrollTo({
+          top: (noSessionsError?.offsetTop || 0) - 100,
+          behavior: 'smooth',
+        });
+      }
+    });
+
+    function calculateTotal() {
+      let total = 0;
+
+      allSessionCheckboxes.forEach((checkbox) => {
+        if (checkbox.checked) {
+          if (checkbox.id === 'session1') {
+            total += session1Fee;
+          } else {
+            total += optionalFee;
+          }
+        }
+      });
+
+      if (totalElement) {
+        totalElement.textContent = total.toLocaleString() + ' PKR';
+      }
+
+      // Update hidden input for Netlify form
+      let hiddenInput = document.querySelector('input[name="total_amount"]');
+      if (!hiddenInput && form) {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'total_amount';
+        input.value = total.toString();
+        form.appendChild(input);
+      } else if (hiddenInput) {
+        hiddenInput.value = total.toString();
+      }
+    }
+  });
+</script>
