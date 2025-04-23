@@ -231,7 +231,6 @@ const metadata = {
         <div class="flex flex-col space-y-1">
           <label for="transfer_ref" class="font-medium">Transfer Reference/Transaction ID*</label>
           <input
-            required
             aria-required="true"
             class="bg-slate-100 rounded p-2 border border-gray-300"
             name="transfer_ref"
@@ -242,7 +241,6 @@ const metadata = {
         <div class="flex flex-col space-y-1">
           <label for="transfer_amount" class="font-medium">Amount Transferred*</label>
           <input
-            required
             aria-required="true"
             class="bg-slate-100 rounded p-2 border border-gray-300"
             name="transfer_amount"
@@ -350,7 +348,7 @@ const metadata = {
       }
 
       // Update hidden input for Netlify form
-      let hiddenInput = document.querySelector('input[name="total_amount"]');
+      const hiddenInput = document.querySelector('input[name="total_amount"]');
       if (!hiddenInput && form) {
         const input = document.createElement('input');
         input.type = 'hidden';
