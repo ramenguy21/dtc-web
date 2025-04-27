@@ -92,7 +92,7 @@ const metadata = {
 
         <div class="flex flex-col space-y-1">
           <label for="pmdc" class="font-medium">Council Registration Number*</label>
-          <p class="text-sm">e.g PMDC, PCP, BEMS</p>
+          <p class="text-sm">e.g PMDC, PCP, NCT</p>
           <input
             required
             aria-required="true"
@@ -140,7 +140,7 @@ const metadata = {
         Please select the sessions you wish to attend (at least one session is required):
       </p>
 
-      <div class="space-y-4">
+      <div class="space-y-2 h-full">
         <!-- Session 1 (Optional) -->
         <div class="p-3 bg-slate-50 rounded border border-slate-200">
           <div class="flex items-start">
@@ -170,7 +170,7 @@ const metadata = {
             <input class="mt-1 mr-3" type="checkbox" id="session3" name="sessions" value="session3" />
             <div>
               <label for="session3" class="font-medium">Session 3 - 5,000 PKR</label>
-              <p class="text-sm">Dr. Adeel ur Rehman (02:00-02:30 PM)</p>
+              <p class="text-sm">Dr. Adeel ur Rehman (01:30-02:15 PM)</p>
               <p class="text-sm">Topic: Laser Hair Removal</p>
             </div>
           </div>
@@ -182,17 +182,28 @@ const metadata = {
             <input class="mt-1 mr-3" type="checkbox" id="session4" name="sessions" value="session4" />
             <div>
               <label for="session4" class="font-medium">Session 4 - 5,000 PKR</label>
-              <p class="text-sm">Dr. Uzma Pirzada (03:45-04:15 PM)</p>
+              <p class="text-sm">Dr. Uzma Pirzada (02:30-03:30 PM)</p>
               <p class="text-sm">Topic: Role of Energy-Based Devices (EBD) in Aesthetics & Dermatology</p>
             </div>
           </div>
         </div>
+        <!-- Session 5 (Optional) -->
+        <div class="p-3 bg-slate-50 rounded border border-slate-200">
+          <div class="flex items-start">
+            <input class="mt-1 mr-3" type="checkbox" id="session5" name="sessions" value="session5" />
+            <div>
+              <label for="session5" class="font-medium">Session 5 - 5,000 PKR</label>
+              <p class="text-sm">Dr. Hina Sohail (03:45-04:30 PM)</p>
+              <p class="text-sm">Topic: Skin Boosters</p>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
 
-      <div class="mt-4 p-3 bg-primary/10 rounded-lg">
-        <p class="font-bold">Total Amount: <span id="totalAmount">0 PKR</span></p>
-        <p id="noSessionsError" class="text-red-600 mt-1 hidden">Please select at least one session.</p>
-      </div>
+    <div class="mt-4 p-3 bg-primary/10 rounded-lg">
+      <p class="font-bold">Total Amount: <span id="totalAmount">0 PKR</span></p>
+      <p id="noSessionsError" class="text-red-600 mt-1 hidden">Please select at least one session.</p>
     </div>
 
     <!-- Payment Section -->
@@ -242,11 +253,11 @@ const metadata = {
       type="submit">Complete Registration</button
     >
   </form>
-
-  <p class="text-sm text-center text-gray-600">
-    After submission, you will receive a confirmation email within 24 hours once your payment is verified.
-  </p>
 </Layout>
+
+<p class="text-sm text-center text-gray-600">
+  After submission, you will receive a confirmation email within 24 hours once your payment is verified.
+</p>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
