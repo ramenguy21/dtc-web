@@ -15,7 +15,7 @@ const metadata = {
   </Hero>
 
   <form
-    name="expo_masterclass_registration"
+    name="expo_masterclass_registration_day_1"
     data-netlify="true"
     method="POST"
     enctype="multipart/form-data"
@@ -26,7 +26,8 @@ const metadata = {
       <label>Don't fill this out if you're human: <input name="bot-field" /></label>
     </p>
 
-    <h1 class="text-2xl font-bold text-center mb-4">Master Class Registration Form</h1>
+    <h1 class="text-2xl font-bold text-center mb-4">Master Class Registration Form (Day 1)</h1>
+    <p class="text-lg font-italic text-center mb-2">For registered professionals only</p>
 
     <!-- Personal Information Section -->
     <div class="bg-white p-4 rounded-lg shadow-sm">
@@ -90,6 +91,19 @@ const metadata = {
         </div>
 
         <div class="flex flex-col space-y-1">
+          <label for="pmdc" class="font-medium">Council Registration Number*</label>
+          <p class="text-sm">e.g PMDC, PCP, BEMS</p>
+          <input
+            required
+            aria-required="true"
+            class="bg-slate-100 rounded p-2 border border-gray-300"
+            name="pmdc"
+            type="text"
+            placeholder="XXXXX"
+          />
+        </div>
+
+        <div class="flex flex-col space-y-1">
           <label for="institution" class="font-medium">Workplace/Institution</label>
           <input class="bg-slate-100 rounded p-2 border border-gray-300" name="institution" type="text" />
         </div>
@@ -132,37 +146,20 @@ const metadata = {
           <div class="flex items-start">
             <input class="mt-1 mr-3" type="checkbox" id="session1" name="sessions" value="session1" />
             <div>
-              <label for="session1" class="font-medium">Session 1 - 10,000 PKR</label>
-              <p class="text-sm">Dr. Uzma Rajar</p>
-              <p class="text-sm">Lecture 1 (9:30-10:15 AM): Combination approach for mid-face balance</p>
-              <p class="text-sm">Lecture 2 + Hands-on (10:30-11:30 AM): Vulvovaginal Rejuvenation</p>
+              <label for="session1" class="font-medium">Session 1 - 5,000 PKR</label>
+              <p class="text-sm">Faisal Ikhlaq (10:30-11:15 AM)</p>
+              <p class="text-sm">Topic: Dermal Fillers</p>
             </div>
           </div>
         </div>
-
         <!-- Session 2 (Optional) -->
-        <div>
-          <p class="font-medium mb-2">Session 2 (Choose one or both):</p>
-
-          <div class="space-y-3 ml-4">
-            <div class="p-3 bg-slate-50 rounded border border-slate-200">
-              <div class="flex items-start">
-                <input class="mt-1 mr-3" type="checkbox" id="session2a" name="sessions" value="session2a" />
-                <div>
-                  <label for="session2a" class="font-medium">Dermal Fillers - 5,000 PKR</label>
-                  <p class="text-sm">Faisal Ikhlaq (10:30-10:15 AM)</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="p-3 bg-slate-50 rounded border border-slate-200">
-              <div class="flex items-start">
-                <input class="mt-1 mr-3" type="checkbox" id="session2b" name="sessions" value="session2b" />
-                <div>
-                  <label for="session2b" class="font-medium">Botox - 5,000 PKR</label>
-                  <p class="text-sm">Dr. Faisal Khilji (10:30-11:45 AM)</p>
-                </div>
-              </div>
+        <div class="p-3 bg-slate-50 rounded border border-slate-200">
+          <div class="flex items-start">
+            <input class="mt-1 mr-3" type="checkbox" id="session2" name="sessions" value="session2" />
+            <div>
+              <label for="session2" class="font-medium">Session 2 - 5,000 PKR</label>
+              <p class="text-sm">Dr. Faisal Khilji (11:30-12:30 AM)</p>
+              <p class="text-sm">Topic: Botox</p>
             </div>
           </div>
         </div>
@@ -216,63 +213,40 @@ const metadata = {
         >
       </div>
 
-      <div class="space-y-3">
-        <div class="flex flex-col space-y-1">
-          <label for="payment_date" class="font-medium">Date of Transfer*</label>
-          <input
-            required
-            aria-required="true"
-            class="bg-slate-100 rounded p-2 border border-gray-300"
-            name="payment_date"
-            type="date"
-          />
-        </div>
+      <div class="flex flex-col space-y-1">
+        <label for="transfer_amount" class="font-medium">Amount Transferred*</label>
+        <input
+          aria-required="true"
+          class="bg-slate-100 rounded p-2 border border-gray-300"
+          name="transfer_amount"
+          type="text"
+        />
+      </div>
 
-        <div class="flex flex-col space-y-1">
-          <label for="transfer_ref" class="font-medium">Transfer Reference/Transaction ID*</label>
-          <input
-            aria-required="true"
-            class="bg-slate-100 rounded p-2 border border-gray-300"
-            name="transfer_ref"
-            type="text"
-          />
-        </div>
-
-        <div class="flex flex-col space-y-1">
-          <label for="transfer_amount" class="font-medium">Amount Transferred*</label>
-          <input
-            aria-required="true"
-            class="bg-slate-100 rounded p-2 border border-gray-300"
-            name="transfer_amount"
-            type="text"
-          />
-        </div>
-
-        <div class="flex flex-col space-y-1">
-          <label for="payment_proof" class="font-medium">Upload Payment Receipt*</label>
-          <input
-            required
-            aria-required="true"
-            class="bg-slate-100 rounded p-2 border border-gray-300"
-            name="payment_proof"
-            type="file"
-            accept="image/*,.pdf"
-          />
-          <p class="text-xs text-gray-500">Upload screenshot or PDF (max 10MB)</p>
-        </div>
+      <div class="flex flex-col space-y-1">
+        <label for="payment_proof" class="font-medium">Upload Payment Receipt*</label>
+        <input
+          required
+          aria-required="true"
+          class="bg-slate-100 rounded p-2 border border-gray-300"
+          name="payment_proof"
+          type="file"
+          accept="image/*,.pdf"
+        />
+        <p class="text-xs text-gray-500">Upload screenshot or PDF (max 10MB)</p>
       </div>
     </div>
-
-    <button
-      id="submitButton"
-      class="bg-primary p-3 rounded text-white font-medium w-full md:w-1/2 mx-auto hover:bg-primary-dark transition-colors"
-      type="submit">Complete Registration</button
-    >
-
-    <p class="text-sm text-center text-gray-600">
-      After submission, you will receive a confirmation email within 24 hours once your payment is verified.
-    </p>
   </form>
+
+  <button
+    id="submitButton"
+    class="bg-primary p-3 rounded text-white font-medium w-full md:w-1/2 mx-auto hover:bg-primary-dark transition-colors"
+    type="submit">Complete Registration</button
+  >
+
+  <p class="text-sm text-center text-gray-600">
+    After submission, you will receive a confirmation email within 24 hours once your payment is verified.
+  </p>
 </Layout>
 
 <script>
@@ -307,7 +281,7 @@ const metadata = {
     // Copy IBAN functionality
     const copyButton = document.getElementById('copyIban');
     copyButton?.addEventListener('click', function () {
-      const iban = 'PK36HABB0012345678901234';
+      const iban = 'PK23MEZN0099670111604139';
       navigator.clipboard.writeText(iban).then(() => {
         copyButton.textContent = 'Copied!';
         setTimeout(() => {
